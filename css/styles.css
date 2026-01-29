@@ -25,6 +25,7 @@ h1, h2, h3 {
 /* =========================
    HEADER & NAVIGATION
    ========================= */
+
 header {
   position: sticky;
   top: 0;
@@ -32,64 +33,51 @@ header {
   z-index: 1000;
 }
 
+/* STACKED HEADER (BULLETPROOF) */
 .nav-container {
   max-width: 1200px;
   margin: auto;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: stretch;
   padding: 1.25rem 1rem;
-  flex-wrap: wrap; /* 🔑 allow wrapping instead of clipping */
 }
 
-
+/* BRAND ROW */
 .brand {
   display: flex;
   align-items: center;
-  gap: 0.9rem;
-  flex: 1 1 auto;     /* 🔑 allow growth */
-  min-width: 280px;   /* 🔑 guarantees space for name */
+  gap: 1rem;
 }
-
-
 
 .brand img {
-  height: 72px;          /* bigger than before */
+  height: 72px;
   width: auto;
-  max-width: 300px;
-}
-
-
-.brand img:hover {
-  transform: scale(1.02);
 }
 
 .brand-name {
   font-family: 'Montserrat', Arial, sans-serif;
-  font-size: 1.35rem;
+  font-size: 1.4rem;
   font-weight: 700;
-  overflow: visible;
   letter-spacing: 0.6px;
   color: #ffffff;
   text-transform: uppercase;
   line-height: 1.2;
 }
 
+/* NAV ROW */
 nav {
   display: flex;
   align-items: center;
+  gap: 1.25rem;
+  margin-top: 0.75rem;
   flex-wrap: wrap;
-  justify-content: flex-end;
-  gap: 0.25rem;
-  flex: 0 1 auto;   /* 🔑 nav can shrink/wrap */
 }
-
 
 nav a,
 .dropbtn {
   color: #ffffff;
   text-decoration: none;
-  margin: 0 0.75rem;
   font-family: 'Montserrat', Arial, sans-serif;
   font-weight: 500;
   letter-spacing: 0.4px;
@@ -103,17 +91,13 @@ nav a:hover,
   color: #f97316;
 }
 
-nav a:hover {
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
-}
-
 .nav-cta {
   border: 1px solid #f97316;
   padding: 0.4rem 0.8rem;
   border-radius: 4px;
 }
 
+/* DROPDOWN */
 .dropdown {
   position: relative;
 }
@@ -143,13 +127,11 @@ nav a:hover {
   display: block;
 }
 
+/* MOBILE */
 .menu-toggle {
   display: none;
-  background: none;
-  border: none;
-  color: #ffffff;
-  font-size: 1.5rem;
 }
+
 
 /* =========================
    HERO SECTION (FIXED)
