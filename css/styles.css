@@ -79,8 +79,9 @@ section {
 
 .hero-visual {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
 }
+
 
 .hero-logo {
   max-width: 220px;
