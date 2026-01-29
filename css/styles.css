@@ -145,6 +145,94 @@ section {
   text-align: center;
   padding: 1.5rem 0;
 }
+/* =========================
+   HEADER / NAVIGATION
+========================= */
+.site-header {
+  background: #ffffff;
+  border-bottom: 1px solid #e5e5e5;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+
+.logo img {
+  height: 40px;
+}
+
+/* Navigation */
+.main-nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.main-nav a {
+  font-weight: 600;
+  color: var(--brand-primary);
+}
+
+.nav-cta {
+  padding: 0.5rem 1.25rem;
+  font-size: 0.9rem;
+}
+
+/* Mobile Menu */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* =========================
+   RESPONSIVE NAV
+========================= */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .main-nav {
+    position: absolute;
+    top: 72px;
+    left: 0;
+    right: 0;
+    background: #ffffff;
+    display: none;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .main-nav li {
+    border-top: 1px solid #eee;
+  }
+
+  .main-nav a {
+    display: block;
+    padding: 1rem;
+  }
+
+  .main-nav.active {
+    display: block;
+  }
+}
+
 
 /* =========================
    RESPONSIVE
