@@ -306,4 +306,11 @@ section h2::before {
   .hero h1 {
     font-size: 2.1rem;
   }
+
+  @media (max-width: 480px) {
+  .logo-text {
+    display: none;
+  }
+}
+ 
 }
