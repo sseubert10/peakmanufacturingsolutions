@@ -1,15 +1,14 @@
-// Load shared header (GitHub Pages-safe)
-fetch("/peakmanufacturingsolutions/partials/header.html")
-  .then(response => response.text())
+// Load shared header
+fetch('partials/header.html')
+  .then(res => res.text())
   .then(data => {
-    const header = document.getElementById("site-header");
-    if (header) {
-      header.innerHTML = data;
-    }
-  })
-  .catch(err => console.error("Header load error:", err));
+    document.getElementById('header-placeholder').innerHTML = data;
 
-// Mobile menu toggle
-function toggleMenu() {
-  document.getElementById("nav").classList.toggle("open");
-}
+    // Mobile menu toggle
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.main-nav');
+
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+  });
