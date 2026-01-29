@@ -21,7 +21,6 @@ h1, h2, h3 {
   color: #0b1f33;
 }
 
-
 .nav-container{
   max-width:1200px;
   margin:auto;
@@ -123,8 +122,13 @@ nav a:hover {
 }
 
 .hero h1 {
-  font-size: 2.75rem;
+  color: #ffffff;
+   font-size: 2.75rem;
   font-weight: 700;
+}
+
+.hero h1 .accent {
+  color: #f97316; /* brand orange */
 }
 
 
