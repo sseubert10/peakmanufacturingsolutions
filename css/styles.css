@@ -137,6 +137,11 @@ nav a,.dropbtn{
   font-weight:600;
 }
 
+nav a:hover {
+  color: #f97316;
+  text-decoration: underline 2px solid #f97316;
+}
+
 footer{
   background:#0b1f33;
   color:#fff;
