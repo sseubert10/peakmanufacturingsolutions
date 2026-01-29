@@ -5,8 +5,6 @@
   box-sizing: border-box;
 }
 
-[ LOGO ]  Peak Manufacturing Solutions
-
 body {
   margin: 0;
   font-family: 'Inter', Arial, Helvetica, sans-serif;
@@ -26,9 +24,6 @@ h1, h2, h3 {
    HEADER & NAVIGATION
    ========================= */
 
-/* =========================
-   HEADER & NAVIGATION
-   ========================= */
 header {
   position: sticky;
   top: 0;
@@ -36,268 +31,15 @@ header {
   z-index: 1000;
 }
 
+/* STACKED HEADER — BULLETPROOF */
 .nav-container {
   max-width: 1200px;
   margin: auto;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
   padding: 1.25rem 1rem;
-  flex-wrap: wrap;
 }
 
+/* BRAND ROW */
 .brand {
-  display: flex;
-  align-items: center;
-  gap: 0.9rem;
-  flex-shrink: 0;     /* protect brand from shrinking */
-}
-
-.brand img {
-  height: 72px;
-  width: auto;
-}
-
-.brand-name {
-  font-family: 'Montserrat', Arial, sans-serif;
-  font-size: 1.35rem;
-  font-weight: 700;
-  letter-spacing: 0.6px;
-  text-transform: uppercase;
-  color: #ffffff;
-  white-space: nowrap; /* keep name on one line */
-}
-/* NAV ROW */
-nav {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;  /* allow navigation to wrap if needed */
-  gap: 0.75rem;
-}
-
-
-nav a,
-.dropbtn {
-  color: #ffffff;
-  text-decoration: none;
-  font-family: 'Montserrat', Arial, sans-serif;
-  font-weight: 500;
-  letter-spacing: 0.4px;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-nav a:hover,
-.dropbtn:hover {
-  color: #f97316;
-}
-
-.nav-cta {
-  border: 1px solid #f97316;
-  padding: 0.4rem 0.8rem;
-  border-radius: 4px;
-}
-
-/* DROPDOWN */
-.dropdown {
-  position: relative;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #102a43;
-  min-width: 200px;
-  border-radius: 4px;
-  top: 100%;
-  left: 0;
-}
-
-.dropdown-content a {
-  display: block;
-  padding: 0.75rem;
-  color: #ffffff;
-}
-
-.dropdown-content a:hover {
-  background-color: #0b1f33;
-  color: #f97316;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-/* MOBILE */
-.menu-toggle {
-  display: none;
-}
-
-
-/* =========================
-   HERO SECTION (FIXED)
-   ========================= */
-.hero {
-  position: relative;
-  background: linear-gradient(135deg, #0b1f33, #102a43);
-  padding: 5rem 2rem;
-  overflow: hidden;
-}
-
-/* DARK OVERLAY FOR READABILITY */
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.45);
-  z-index: 0;
-}
-
-.hero-inner {
-  position: relative;
-  z-index: 1;
-  max-width: 900px;
-  margin: auto;
-}
-
-.hero h1 {
-  color: #ffffff;
-  font-size: 2.75rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.hero h1 .accent {
-  color: #f97316;
-}
-
-.hero p {
-  color: #ffffff;
-  font-size: 1.15rem;
-  max-width: 750px;
-}
-
-/* =========================
-   SECTIONS
-   ========================= */
-.section {
-  max-width: 1100px;
-  margin: auto;
-  padding: 4rem 2rem;
-}
-
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 2rem;
-}
-
-.card {
-  background: #f8fafc;
-  border: 1px solid #cbd5e1;
-  padding: 2rem;
-  border-radius: 10px;
-  text-decoration: none;
-  color: #0b1f33;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-}
-
-.section-divider {
-  height: 4px;
-  background: linear-gradient(90deg, #f97316 0%, #0b1f33 100%);
-  margin: 2rem 0;
-}
-
-
-/* =========================
-   VALUES & HIGHLIGHT
-   ========================= */
-.values {
-  background: #f1f5f9;
-}
-
-.values-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.highlight {
-  background: #e2e8f0;
-}
-
-/* =========================
-   BUTTONS
-   ========================= */
-.btn-primary {
-  display: inline-block;
-  margin-top: 1.5rem;
-  background: #f97316;
-  color: #ffffff;
-  padding: 0.9rem 1.75rem;
-  text-decoration: none;
-  border-radius: 4px;
-  font-weight: 600;
-}
-
-/* =========================
-   FOOTER
-   ========================= */
-footer {
-  background: #0b1f33;
-  color: #ffffff;
-  text-align: center;
-  padding: 2rem;
-}
-
-/* =========================
-   RESPONSIVE
-   ========================= */
-@media (max-width: 900px) {
-  nav {
-    display: none;
-    flex-direction: column;
-    background: #0b1f33;
-  }
-
-  nav.open {
-    display: flex;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-  .brand img {
-    height: 56px;
-  }
-
-  .brand-name {
-    font-size: 1.15rem;
-  }
-
-}
-@media (max-width: 1024px) {
-  .nav-container {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  nav {
-    width: 100%;
-    justify-content: space-between;
-    margin-top: 0.5rem;
-  }
-}
-
-
-}
-
-
+  disp
