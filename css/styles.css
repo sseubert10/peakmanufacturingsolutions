@@ -2,13 +2,15 @@
    CSS VARIABLES
 ========================= */
 :root {
-  --brand-primary: #0f2a44;
-  --brand-accent: #f2a900;
+  --brand-primary: #0f2a44;     /* Dark blue */
+  --brand-accent: #f05a28;      /* Peak orange (logo accent) */
+  --brand-accent-dark: #d94f22; /* Hover / darker orange */
   --text-dark: #1a1a1a;
   --text-light: #ffffff;
   --bg-light: #f5f7fa;
   --max-width: 1200px;
 }
+
 
 /* =========================
    GLOBAL STYLES
@@ -74,17 +76,27 @@ section {
   padding: 0.75rem 1.75rem;
   font-weight: 600;
   border-radius: 3px;
+  transition: background 0.2s ease, color 0.2s ease;
 }
 
 .btn-primary {
   background: var(--brand-accent);
-  color: #000;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: var(--brand-accent-dark);
 }
 
 .btn-secondary {
   background: var(--brand-primary);
   color: #fff;
 }
+
+.btn-secondary:hover {
+  background: #0b2238;
+}
+
 
 /* =========================
    SOLUTIONS
@@ -110,9 +122,14 @@ section {
 .text-link {
   display: inline-block;
   margin-top: 1rem;
-  color: var(--brand-primary);
+  color: var(--brand-accent);
   font-weight: 600;
 }
+
+.text-link:hover {
+  text-decoration: underline;
+}
+
 
 /* =========================
    WHY PEAK
@@ -124,17 +141,45 @@ section {
   margin-top: 2rem;
 }
 
+
+section h2 {
+  position: relative;
+  padding-left: 0.75rem;
+}
+
+section h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.4rem;
+  width: 4px;
+  height: 1.6rem;
+  background: var(--brand-accent);
+}
+
 /* =========================
    CTA
 ========================= */
-.cta {
-  background: var(--brand-accent);
-  text-align: center;
-}
 
 .cta h2 {
   margin-bottom: 0.5rem;
 }
+
+.cta {
+  background: var(--brand-accent);
+  text-align: center;
+  color: #fff;
+}
+
+.cta .btn-secondary {
+  background: #fff;
+  color: var(--brand-primary);
+}
+
+.cta .btn-secondary:hover {
+  background: #f1f1f1;
+}
+
 
 /* =========================
    FOOTER
@@ -148,6 +193,11 @@ section {
 /* =========================
    HEADER / NAVIGATION
 ========================= */
+.main-nav a:hover {
+  color: var(--brand-accent);
+}
+
+
 .site-header {
   background: #ffffff;
   border-bottom: 1px solid #e5e5e5;
