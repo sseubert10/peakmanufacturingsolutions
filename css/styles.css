@@ -47,14 +47,28 @@ h1, h2, h3 {
 }
 
 
-nav a,.dropbtn{
-  color:#ffffff;
-  text-decoration:none;
-  margin:0 .75rem;
-  font-weight:500;
-  background:none;
-  border:none;
-  cursor:pointer;
+nav a,
+.dropbtn {
+  color: #ffffff;                 /* pure white for contrast */
+  text-decoration: none;
+  margin: 0 0.75rem;
+  font-weight: 500;
+  font-family: 'Montserrat', Arial, sans-serif;
+  letter-spacing: 0.4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+
+nav a:hover,
+.dropbtn:hover {
+  color: #f97316;                  /* brand orange */
+}
+
+nav a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
 }
 
 .nav-cta{
@@ -68,13 +82,26 @@ nav a,.dropbtn{
   display:none;
   position:absolute;
   background:#102a43;
+  background-color: #102a43;       /* slightly lighter than header */
+  border-radius: 4px;
   min-width:200px;
 }
 .dropdown-content a{
   display:block;
   padding:.75rem;
+  color: #ffffff;
 }
-.dropdown:hover .dropdown-content{display:block}
+.dropdown:hover 
+.dropdown-content{display:block}
+
+
+
+.dropdown-content a:hover {
+  background-color: #0b1f33;
+  color: #f97316;
+}
+
+
 
 .menu-toggle{
   display:none;
