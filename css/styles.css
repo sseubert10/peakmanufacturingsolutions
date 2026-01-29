@@ -1,45 +1,156 @@
 /* =========================
-   GLOBAL RESET & BASE
-   ========================= */
+   CSS VARIABLES
+========================= */
+:root {
+  --brand-primary: #0f2a44;
+  --brand-accent: #f2a900;
+  --text-dark: #1a1a1a;
+  --text-light: #ffffff;
+  --bg-light: #f5f7fa;
+  --max-width: 1200px;
+}
+
+/* =========================
+   GLOBAL STYLES
+========================= */
 * {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  font-family: 'Inter', Arial, Helvetica, sans-serif;
-  color: #1f2933;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text-dark);
   line-height: 1.6;
-  background: #ffffff;
 }
 
-h1, h2, h3 {
-  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+h1, h2, h3, h4 {
+  margin-top: 0;
   font-weight: 600;
-  letter-spacing: 0.3px;
-  color: #0b1f33;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 /* =========================
-   HEADER & NAVIGATION
-   ========================= */
-
-header {
-  position: sticky;
-  top: 0;
-  background: #0b1f33;
-  z-index: 1000;
+   LAYOUT
+========================= */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
 }
 
-/* STACKED HEADER — BULLETPROOF */
-.nav-container {
-  max-width: 1200px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  padding: 1.25rem 1rem;
+section {
+  padding: 4.5rem 0;
 }
 
-/* BRAND ROW */
-.brand {
-  disp
+/* =========================
+   HERO
+========================= */
+.hero {
+  background: var(--brand-primary);
+  color: var(--text-light);
+}
+
+.hero h1 {
+  font-size: 2.75rem;
+  max-width: 700px;
+}
+
+.hero p {
+  max-width: 650px;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.75rem;
+  font-weight: 600;
+  border-radius: 3px;
+}
+
+.btn-primary {
+  background: var(--brand-accent);
+  color: #000;
+}
+
+.btn-secondary {
+  background: var(--brand-primary);
+  color: #fff;
+}
+
+/* =========================
+   SOLUTIONS
+========================= */
+.solutions {
+  background: var(--bg-light);
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.text-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--brand-primary);
+  font-weight: 600;
+}
+
+/* =========================
+   WHY PEAK
+========================= */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* =========================
+   CTA
+========================= */
+.cta {
+  background: var(--brand-accent);
+  text-align: center;
+}
+
+.cta h2 {
+  margin-bottom: 0.5rem;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer {
+  background: #111;
+  color: #ccc;
+  text-align: center;
+  padding: 1.5rem 0;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.1rem;
+  }
+}
