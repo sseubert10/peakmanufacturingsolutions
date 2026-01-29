@@ -1,30 +1,31 @@
-<header>
-  <div class="nav-container">
-    <div class="brand">
-      <img src="/peakmanufacturingsolutions/images/peak-logo.png"
-           alt="Peak Manufacturing Solutions Logo">
-      <span class="brand-name">Peak Manufacturing Solutions</span>
-    </div>
+<header class="site-header">
+  <div class="container header-inner">
 
-    <nav id="nav">
-      <a href="/peakmanufacturingsolutions/index.html">Home</a>
-      <a href="/peakmanufacturingsolutions/about.html">About</a>
+    <!-- Logo -->
+    <a href="index.html" class="logo">
+      <img src="images/peak-logo.png" alt="Peak Manufacturing Solutions Logo">
+    </a>
 
-      <div class="dropdown">
-        <button class="dropbtn">Solutions</button>
-        <div class="dropdown-content">
-          <a href="/peakmanufacturingsolutions/tools.html">Tools</a>
-          <a href="/peakmanufacturingsolutions/materialhandling.html">Material Handling</a>
-          <a href="/peakmanufacturingsolutions/automation.html">Automation</a>
-          <a href="/peakmanufacturingsolutions/accessories.html">Accessories</a>
-        </div>
-      </div>
-
-      <a href="/peakmanufacturingsolutions/contact.html" class="nav-cta">
-        Contact
-      </a>
+    <!-- Navigation -->
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="tools.html">Tools</a></li>
+        <li><a href="materialhandling.html">Material Handling</a></li>
+        <li><a href="automation.html">Automation</a></li>
+        <li><a href="accessories.html">Accessories</a></li>
+        <li>
+          <a href="contact.html" class="btn btn-primary nav-cta">
+            Contact
+          </a>
+        </li>
+      </ul>
     </nav>
 
-    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <!-- Mobile Menu Button -->
+    <button class="menu-toggle" aria-label="Toggle menu">
+      ☰
+    </button>
+
   </div>
 </header>
