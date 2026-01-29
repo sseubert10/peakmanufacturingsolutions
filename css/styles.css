@@ -213,9 +213,24 @@ section h2::before {
   height: 72px;
 }
 
-.logo img {
-  height: 40px;
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 700;
 }
+
+.logo img {
+  height: 48px; /* Bigger logo */
+}
+
+.logo-text {
+  font-size: 1.05rem;
+  color: var(--brand-primary);
+  white-space: nowrap;
+}
+
 
 /* Navigation */
 .main-nav ul {
