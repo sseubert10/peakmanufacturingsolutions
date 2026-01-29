@@ -33,19 +33,23 @@ header {
 }
 
 .nav-container {
-  max-width: 1600px;
+  max-width: 1200px;
   margin: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 1.25rem 1rem;
+  flex-wrap: wrap; /* 🔑 allow wrapping instead of clipping */
 }
+
 
 .brand {
   display: flex;
   align-items: center;
   gap: 0.9rem;
+  min-width: 0; /* 🔑 prevents flex clipping */
 }
+
 
 .brand img {
   height: 72px;          /* bigger than before */
@@ -60,13 +64,14 @@ header {
 
 .brand-name {
   font-family: 'Montserrat', Arial, sans-serif;
-  font-size: 1.4rem;
+  font-size: 1.35rem;
   font-weight: 700;
   letter-spacing: 0.6px;
   color: #ffffff;
   text-transform: uppercase;
-  white-space: nowrap;
+  line-height: 1.2;
 }
+
 
 
 nav a,
@@ -260,7 +265,7 @@ footer {
 /* =========================
    RESPONSIVE
    ========================= */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   nav {
     display: none;
     flex-direction: column;
@@ -280,8 +285,10 @@ footer {
   }
 
   .brand-name {
-    font-size: 1.05rem;
+    font-size: 1.15rem;
   }
+
+}
 
 
 }
